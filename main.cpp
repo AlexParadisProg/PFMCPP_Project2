@@ -16,14 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
+int
+char
+bool
+float
+double 
+void
  
- 
- 
- 
- 
- 
- 
- 
+  
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -57,9 +57,47 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int total = 10;
+    int minuteSpent = 60;
+    int length = 30;
 
+    char grade = 'A';
+    char lastLetter = 'Z';
+    char chapter = 'B';
+
+    bool isOpen = true;
+    bool finished = false;
+    bool running = false;
+
+    float letterSize = 1.2f;
+    float paragraphSpace = 4.8f;
+    float textIndentation = 10.6f;
+
+    double maxWidth = 2E-8;
+    double maxLetterSpace = 8.5;
+    double minLetterSpace = 2.0;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    ignoreUnused(total);
+    ignoreUnused(minuteSpent);
+    ignoreUnused(length);
+    
+    ignoreUnused(grade);
+    ignoreUnused(lastLetter);
+    ignoreUnused(chapter);
+    
+    ignoreUnused(isOpen);
+    ignoreUnused(finished);
+    ignoreUnused(running);
+    
+    ignoreUnused(letterSize);
+    ignoreUnused(paragraphSpace);
+    ignoreUnused(textIndentation);
+    
+    ignoreUnused(maxWidth);
+    ignoreUnused(maxLetterSpace);
+    ignoreUnused(minLetterSpace);
 }
 
 /*
@@ -75,43 +113,82 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void verticalRotatePlane(int planeId = 1, float verticalAngle = 0.1f, float rotationSeconds = 0.1f)
+{
+    ignoreUnused(planeId, verticalAngle, rotationSeconds); 
+}   
 
 /*
  2)
  */
+void horizontalRotatePlane(int boatId = 1, float horizontalAngle = 0.1f, float rotationSeconds = 0.1f)
+{
+    ignoreUnused(boatId, horizontalAngle, rotationSeconds); 
+}
 
 /*
  3)
  */
-
+void lionHunting(int lionId = 1, int animalHuntedId = 0, int walkSpeed = 1)
+{
+    ignoreUnused(lionId, animalHuntedId, walkSpeed); 
+}
 /*
  4)
  */
+bool detachRocketsfromShuttle(int rocketId = 1)
+{
+    ignoreUnused(rocketId);
+    return {};
+}
 
 /*
  5)
  */
-
+int changeTelevisionChannel(bool moveForward = 1, int numberOfChannels = 1)
+{
+    ignoreUnused(moveForward, numberOfChannels);
+    return {};
+}
 /*
  6)
  */
-
+bool displayExtSource(int extSource = 1)
+{
+    ignoreUnused(extSource);
+    return {};
+}
 /*
  7)
  */
-
+bool spinWasher(int washerId = 1, int spinSpeed = 1)
+{
+    ignoreUnused(washerId, spinSpeed);
+    return {};
+}
 /*
  8)
  */
-
+void setFridgeTemperature(int fridgeId = 1, float temperatureC = 0.0f)
+{
+    ignoreUnused(fridgeId, temperatureC);
+}
 /*
  9)
  */
-
+bool recordVideo(int cameraId)
+{
+    ignoreUnused(cameraId);
+    return {};
+}
 /*
  10)
  */
-
+float playSpeaker(int speakerChannelNumber = 1)
+{
+    ignoreUnused(speakerChannelNumber);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -132,27 +209,43 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    verticalRotatePlane(3, 0.8f, 5);
+
     //2)
-    
+    horizontalRotatePlane(2, 0.3f, 12);
+
     //3)
-    
+    lionHunting(2, 10, 15);
+
     //4)
-    
+    auto rocketDetached = detachRocketsfromShuttle(1);
+
     //5)
-    
+    auto televisionChannel = changeTelevisionChannel(0, 2);
+
     //6)
-    
+    auto newExtSource = displayExtSource(2);
+
     //7)
-    
+    auto isWasherSpinning = spinWasher(2, 10);
+
     //8)
+    setFridgeTemperature(4, 5.2f);
     
     //9)
-    
+    auto isCameraRecording = recordVideo(4);
+
     //10)
-    
+    auto speakerVolume = playSpeaker(1);
     
     ignoreUnused(carRented);
+    ignoreUnused(rocketDetached);
+    ignoreUnused(televisionChannel);
+    ignoreUnused(newExtSource);
+    ignoreUnused(isWasherSpinning);
+    ignoreUnused(isCameraRecording);
+    ignoreUnused(speakerVolume);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
