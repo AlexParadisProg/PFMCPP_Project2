@@ -77,27 +77,7 @@ void variableDeclarations()
     double maxLetterSpace = 8.5;
     double minLetterSpace = 2.0;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-
-    ignoreUnused(total);
-    ignoreUnused(minuteSpent);
-    ignoreUnused(length);
-    
-    ignoreUnused(grade);
-    ignoreUnused(lastLetter);
-    ignoreUnused(chapter);
-    
-    ignoreUnused(isOpen);
-    ignoreUnused(finished);
-    ignoreUnused(running);
-    
-    ignoreUnused(letterSize);
-    ignoreUnused(paragraphSpace);
-    ignoreUnused(textIndentation);
-    
-    ignoreUnused(maxWidth);
-    ignoreUnused(maxLetterSpace);
-    ignoreUnused(minLetterSpace);
+    ignoreUnused(number, total, minuteSpent, length, grade, lastLetter, chapter, isOpen, finished, running, letterSize, paragraphSpace, textIndentation, maxWidth, maxLetterSpace, minLetterSpace); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -238,13 +218,7 @@ int main()
     //10)
     auto speakerVolume = playSpeaker(1);
     
-    ignoreUnused(carRented);
-    ignoreUnused(rocketDetached);
-    ignoreUnused(televisionChannel);
-    ignoreUnused(newExtSource);
-    ignoreUnused(isWasherSpinning);
-    ignoreUnused(isCameraRecording);
-    ignoreUnused(speakerVolume);
+    ignoreUnused(carRented, rocketDetached, televisionChannel, newExtSource, isWasherSpinning, isCameraRecording, speakerVolume);
 
     std::cout << "good to go!" << std::endl;
     return 0;    
